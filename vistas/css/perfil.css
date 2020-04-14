@@ -1,0 +1,98 @@
+/*=============================================
+PERFIL
+=============================================*/
+#perfil figure#imgPerfil img{
+
+	width:80%;
+	margin:10px 0;
+
+}
+
+#perfil #subirImagen{
+	display:none;
+	margin:20px 0px;
+	border:2px dotted #ccc;
+	overflow: hidden;
+	padding:40px;
+	cursor:pointer;
+}
+
+#perfil #subirImagen img{
+	width:100%;
+	padding:10px;
+}
+
+#perfil #subirImagen #datosImagen{
+	height:65px;
+}
+
+div.progress.barra{
+	height: 2.5rem;
+}
+
+
+ /*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+
+
+
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+
+	
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+
+	.perfilTitular{
+
+		display: none;
+		
+	}
+
+	h1.perfilTitulo{
+
+		font-size: 35px;
+		
+	}
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:767px){
+
+	.perfilTitular{
+
+		display: none;
+		
+	}
+
+	h1.perfilTitulo{
+
+		font-size: 32px;
+		margin-left: 20px;
+		
+	}
+
+
+
+}
+
+
+

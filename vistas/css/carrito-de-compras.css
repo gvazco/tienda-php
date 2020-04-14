@@ -1,0 +1,121 @@
+/*=============================================
+CARRITO DE COMPRAS
+=============================================*/
+.cabeceraCarrito{
+	height:40px;
+}
+
+.cabeceraCarrito h3{
+	margin-top:-5px
+}
+
+.cabeceraCheckout{
+	height:66px;
+}
+
+/*=============================================
+CHECKOUT
+=============================================*/
+
+.contenidoCheckout, .contenidoCheckout .row{
+	padding:0px 20px;
+}
+
+.formEnvio{
+	display:none;
+} 
+
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+
+	div.cuerpoCarrito.itemCarrito{
+		display: flex;
+	}
+
+	div.cabeceraCarrito h3{
+
+	}
+
+	img.imgLogo{
+
+		margin:22%;
+		
+	}
+
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+
+	div.cuerpoCarrito.itemCarrito{
+		display: flex;
+	}
+
+	div.cabeceraCarrito h3{
+
+		font-size: 30px;
+		
+	}
+
+	img.imgLogo{
+
+		margin:22%;
+		
+	}
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+
+	div.cuerpoCarrito.itemCarrito{
+		display: flex;
+	}
+
+	div.cabeceraCarrito h3{
+
+		font-size: 20px;
+		
+	}
+
+	figure.imgCarrito{
+		margin-top: 20px;
+	}
+
+	div.card-body.col-12.cuerpoCarrito{
+		padding: 0.25rem;
+	}
+
+	p.tituloCarritoCompra{
+		font-size: 15px;
+	}
+
+	img.imgLogo{
+		display: none;
+	}
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:767px){
+
+	img.imgLogo{
+		display: none;
+	}
+
+}
+
+
+
