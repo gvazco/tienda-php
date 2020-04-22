@@ -20,10 +20,19 @@
         </a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          Salir <i class="fas fa-sign-out-alt"></i>
+       <li class="nav-item">
+
+        <a class="nav-link" href="{{ route('logout')}}" onclick="event.preventDefault();
+                                                                   document.getElementById('logout-form').submit()">
+          <i class="fas fa-sign-out-alt"></i>
+
         </a>
+
+        <form id="logout-form" action="{{ route('logout')}}" method="post" style="display:none">
+        @csrf
+        </form>
+
+
       </li>
     </ul>
   </nav>

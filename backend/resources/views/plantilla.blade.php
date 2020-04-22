@@ -8,7 +8,7 @@
 		<title>Backend | Mevasa Comercializadora </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="icon" href="{{$plantilla[0]["icono"]}}">
+		<link rel="icon" href="{{ url('/') }}/{{ $plantilla[0]["icono"]}} ">
 
 		<!--====================================
 		=            PLUGINS DE CSS            =
@@ -95,21 +95,25 @@
 		</head>
 
 		<body class="hold-transition sidebar-mini layout-fixed">
-			
-			<div class="wrapper">
-				
-				@include('modulos.header')
 
-				@include('modulos.sidebar')
+			<div id="app">
 
-				@yield('content')
+				<div class="wrapper">
 
-				@include('modulos.footer')
+					@include('modulos.header')
+
+					@include('modulos.sidebar')
+
+					@yield('content')
+
+					@include('modulos.footer')
+
+				</div>
+
+				<script src="{{ url('/') }}/js/codigo.js"></script>
+				<script src="{{ url('/') }}/js/gestorComercio.js"></script>
 
 			</div>
-
-		<script src="{{ url('/') }}/js/codigo.js"></script>
-		<script src="{{ url('/') }}/js/gestorComercio.js"></script>
 
 		</body>
 		
