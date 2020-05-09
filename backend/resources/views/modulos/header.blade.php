@@ -1,38 +1,49 @@
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-      </li>
-    </ul>
+  <!-- Left navbar links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+    </li>
+  </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+  <!-- Right navbar links -->
+  <ul class="navbar-nav ml-auto">
 
-      <!-- Messages Dropdown Menu -->
-     
-      <!-- Notifications Dropdown Menu -->
+    <!-- Messages Dropdown Menu -->
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          Hola Administrador
-        </a>
-      </li>
+    <!-- Notifications Dropdown Menu -->
 
-       <li class="nav-item">
+    <li class="nav-item">
+      <a class="nav-link" href="#">
 
-        <a class="nav-link" href="{{ route('logout')}}" onclick="event.preventDefault();
-                                                                   document.getElementById('logout-form').submit()">
-          <i class="fas fa-sign-out-alt"></i>
+        @foreach ($administradores as $element)
 
-        </a>
+        @if ($_COOKIE["email_login"] == $element->email)
 
-        <form id="logout-form" action="{{ route('logout')}}" method="post" style="display:none">
-        @csrf
-        </form>
+        Hola, {{ $element->name }}
+
+        @endif
+
+        @endforeach
+
+      </a>
+    </li>
+
+    <li class="nav-item">
+
+      <a class="nav-link" href="{{ route('logout')}}" onclick="event.preventDefault();
+      document.getElementById('logout-form').submit()">
+      <i class="fas fa-sign-out-alt"></i>
+
+    </a>
+
+    <form id="logout-form" action="{{ route('logout')}}" method="post" style="display:none">
+      @csrf
+
+    </form>
 
 
-      </li>
-    </ul>
-  </nav>
+  </li>
+</ul>
+</nav>

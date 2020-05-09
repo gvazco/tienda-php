@@ -94,6 +94,10 @@
 
 		</head>
 
+		@if (Route::has('login'))
+
+		@auth
+
 		<body class="hold-transition sidebar-mini layout-fixed">
 
 			<div id="app">
@@ -110,11 +114,23 @@
 
 				</div>
 
+				<input type="hidden" id="ruta" value="{{url('/')}}">
+
 				<script src="{{ url('/') }}/js/codigo.js"></script>
 				<script src="{{ url('/') }}/js/gestorComercio.js"></script>
+				<script src="{{url('/')}}/js/gestorAdministradores.js"></script>
+
 
 			</div>
 
 		</body>
+
+		@else
+
+		@include('paginas.login')
+
+		@endauth
+
+		@endif
 		
 		</html>

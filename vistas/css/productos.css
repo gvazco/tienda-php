@@ -71,7 +71,12 @@ h1.bannerPrincipal{
 	background: rgba(52,47,63,.7);
 	padding: 5px;
 	padding-left: 20px;
+	padding-right: 20px;
 
+}
+h1.bannerPrincipal:hover{
+	background: rgba(255,255,255,0.8);
+	color: rgb(255, 140, 0);
 }
 
 /*=============================================

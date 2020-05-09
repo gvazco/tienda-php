@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Visitas;
 use App\Plantilla;
+use App\Administradores;
 
 class VisitasController extends Controller
 {
@@ -14,9 +15,11 @@ class VisitasController extends Controller
 
 		$visitas = Visitas::all();
 		$plantilla = Plantilla::all();
+		$administradores = Administradores::all();
+		
 
 
-		return view("paginas.visitas", array("visitas"=>$visitas, "plantilla"=>$plantilla));
+		return view("paginas.visitas", array("visitas"=>$visitas, "plantilla"=>$plantilla, "administradores"=>$administradores));
 
 	}
 

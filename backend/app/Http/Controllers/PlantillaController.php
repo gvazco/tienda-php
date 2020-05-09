@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Plantilla;
+use App\Admistradores;
+use App\Administradores;
 
 class PlantillaController extends Controller
 {
@@ -16,9 +18,9 @@ class PlantillaController extends Controller
 	{
 
 		$plantilla = Plantilla::all();
+		$administradores = Administradores::all();
 
-
-		return view("paginas.plantilla", array("plantilla"=>$plantilla));
+		return view("paginas.plantilla", array("plantilla"=>$plantilla, "administradores"=>$administradores));
 
 	}
 

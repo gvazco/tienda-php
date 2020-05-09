@@ -1,4 +1,10 @@
 /*=============================================
+CAPTURANDO LA RUTA DE MI CMS
+=============================================*/
+
+var ruta = $("#ruta").val();
+
+/*=============================================
 AGREGAR RED
 =============================================*/
 
@@ -11,36 +17,36 @@ $(document).on("click", ".agregarRed", function(){
 	$(".listadoRed").append(`
 
 		<div class="col-lg-12">
+      
+        <div class="input-group mb-3">
+          
+          <div class="input-group-prepend">
+            
+            <div class="input-group-text text-white" style="background:`+color+`">
+              
+                <i class="`+icono+`"></i>
 
-		<div class="input-group mb-3">
+            </div>
 
-		<div class="input-group-prepend">
+          </div>
 
-		<div class="input-group-text text-white" style="background:`+color+`">
+          <input type="text" class="form-control" value="`+url+`">
 
-		<i class="`+icono+`"></i>
+          <div class="input-group-prepend">
+            
+            <div class="input-group-text" style="cursor:pointer">
+              
+                <span class="bg-danger px-2 rounded-circle eliminarRed" red="`+icono+`" url="`+url+`">&times;</span>
 
-		</div>
+            </div>
 
-		</div>
+          </div>
 
-		<input type="text" class="form-control" value="`+url+`">
+        </div>
 
-		<div class="input-group-prepend">
+      </div>
 
-		<div class="input-group-text" style="cursor:pointer">
-
-		<span class="bg-danger px-2 rounded-circle eliminarRed" red="`+icono+`" url="`+url+`">&times;</span>
-
-		</div>
-
-		</div>
-
-		</div>
-
-		</div>
-
-		`)
+	`)
 
 	//Actualizar el registro de la BD
 
@@ -48,9 +54,9 @@ $(document).on("click", ".agregarRed", function(){
 	
 	listaRed.push({
 
-		"url": url,
-		"icono": icono,
-		"background": color
+		 "url": url,
+		 "icono": icono,
+		 "background": color
 
 	})
 
@@ -104,11 +110,11 @@ $("input[type='file']").change(function(){
 
     	notie.alert({
 
-    		type: 3,
-    		text: '¡La imagen debe estar en formato JPG o PNG!',
-    		time: 7
+		    type: 3,
+		    text: '¡La imagen debe estar en formato JPG o PNG!',
+		    time: 7
 
-    	})
+		 })
 
     }else if(imagen["size"] > 2000000){
 
@@ -116,11 +122,11 @@ $("input[type='file']").change(function(){
 
     	notie.alert({
 
-    		type: 3,
-    		text: '¡La imagen no debe pesar más de 2MB!',
-    		time: 7
+		    type: 3,
+		    text: '¡La imagen no debe pesar más de 2MB!',
+		    time: 7
 
-    	})
+		 })
 
     }else{
 
@@ -140,6 +146,338 @@ $("input[type='file']").change(function(){
 
 })
 
+/*=============================================
+SUMMERNOTE
+=============================================*/
 
+// $(".summernote-sm").summernote({
+
+// 	height: 300,
+// 	callbacks: {
+
+// 		onImageUpload: function(files){
+
+// 			for(var i = 0; i < files.length; i++){
+
+// 				upload_sm(files[i]);
+
+// 			}
+
+// 		}
+
+// 	}
+
+// });
+
+// $(".summernote-smc").summernote({
+
+// 	height: 300,
+// 	callbacks: {
+
+// 		onImageUpload: function(files){
+
+// 			for(var i = 0; i < files.length; i++){
+
+// 				upload_smc(files[i]);
+
+// 			}
+
+// 		}
+
+// 	}
+
+// });
+
+// $(".summernote-articulos").summernote({
+
+// 	height: 300,
+// 	callbacks: {
+
+// 		onImageUpload: function(files){
+
+// 			for(var i = 0; i < files.length; i++){
+
+// 				upload_articulos(files[i]);
+
+// 			}
+
+// 		}
+
+// 	}
+
+// });
+
+// $(".summernote-editar-articulo").summernote({
+
+// 	height: 300,
+// 	callbacks: {
+
+// 		onImageUpload: function(files){
+
+// 			for(var i = 0; i < files.length; i++){
+
+// 				upload_editar_articulo(files[i]);
+
+// 			}
+
+// 		}
+
+// 	}
+
+// });
+
+
+/*=============================================
+SUBIR IMAGEN AL SERVIDOR
+=============================================*/
+
+// function upload_sm(file){
+
+// 	var datos = new FormData();	
+// 	datos.append('file', file, file.name);
+// 	datos.append("ruta", ruta);
+// 	datos.append("carpeta", "blog");
+
+// 	$.ajax({
+// 		url: ruta+"/ajax/upload.php",
+// 		method: "POST",
+// 		data: datos,
+// 		contentType: false,
+// 		cache: false,
+// 		processData: false,
+// 		success: function (respuesta) {
+
+// 			$('.summernote-sm').summernote("insertImage", respuesta, function ($image) {
+// 			  $image.attr('class', 'img-fluid');
+// 			});
+
+// 		},
+// 		error: function (jqXHR, textStatus, errorThrown) {
+//           console.error(textStatus + " " + errorThrown);
+//       }
+
+// 	})
+
+// }
+
+// function upload_smc(file){
+
+// 	var datos = new FormData();	
+// 	datos.append('file', file, file.name);
+// 	datos.append("ruta", ruta);
+// 	datos.append("carpeta", "blog");
+
+// 	$.ajax({
+// 		url: ruta+"/ajax/upload.php",
+// 		method: "POST",
+// 		data: datos,
+// 		contentType: false,
+// 		cache: false,
+// 		processData: false,
+// 		success: function (respuesta) {
+
+// 			$('.summernote-smc').summernote("insertImage", respuesta, function ($image) {
+// 			  $image.attr('class', 'img-fluid');
+// 			});
+
+// 		},
+// 		error: function (jqXHR, textStatus, errorThrown) {
+//           console.error(textStatus + " " + errorThrown);
+//       }
+
+// 	})
+
+// }
+
+// function upload_articulos(file){
+
+// 	var datos = new FormData();	
+// 	datos.append('file', file, file.name);
+// 	datos.append("ruta", ruta);
+// 	datos.append("carpeta", "articulos");
+
+// 	$.ajax({
+// 		url: ruta+"/ajax/upload.php",
+// 		method: "POST",
+// 		data: datos,
+// 		contentType: false,
+// 		cache: false,
+// 		processData: false,
+// 		success: function (respuesta) {
+
+// 			$('.summernote-articulos').summernote("insertImage", respuesta, function ($image) {
+// 			  $image.attr('class', 'img-fluid');
+// 			});
+
+// 		},
+// 		error: function (jqXHR, textStatus, errorThrown) {
+//           console.error(textStatus + " " + errorThrown);
+//       }
+
+// 	})
+
+// }
+
+// function upload_editar_articulo(file){
+
+// 	var datos = new FormData();	
+// 	datos.append('file', file, file.name);
+// 	datos.append("ruta", ruta);
+// 	datos.append("carpeta", "articulos");
+
+// 	$.ajax({
+// 		url: ruta+"/ajax/upload.php",
+// 		method: "POST",
+// 		data: datos,
+// 		contentType: false,
+// 		cache: false,
+// 		processData: false,
+// 		success: function (respuesta) {
+
+// 			$('.summernote-editar-articulo').summernote("insertImage", respuesta, function ($image) {
+// 			  $image.attr('class', 'img-fluid');
+// 			});
+
+// 		},
+// 		error: function (jqXHR, textStatus, errorThrown) {
+//           console.error(textStatus + " " + errorThrown);
+//       }
+
+// 	})
+
+// }
+
+
+/*=============================================
+Preguntar antes de Eliminar Registro
+=============================================*/
+
+$(document).on("click", ".eliminarRegistro", function(){
+
+	var action = $(this).attr("action"); 
+  	var method = $(this).attr("method");
+  	var pagina = $(this).attr("pagina");
+  	// var token = $(this).children("[name='_token']").attr("value");
+  	var token = $(this).attr("token");
+
+
+  	swal({
+  		 title: '¿Está seguro de eliminar este registro?',
+  		 text: "¡Si no lo está puede cancelar la acción!",
+  		 type: 'warning',
+  		 showCancelButton: true,
+  		 confirmButtonColor: '#3085d6',
+  		 cancelButtonColor: '#d33',
+  		 cancelButtonText: 'Cancelar',
+  		 confirmButtonText: 'Si, eliminar registro!'
+  	}).then(function(result){
+
+  		if(result.value){
+
+  			var datos = new FormData();
+  			datos.append("_method", method);
+  			datos.append("_token", token);
+
+  			$.ajax({
+
+  				url: action,
+  				method: "POST",
+  				data: datos,
+  				cache: false,
+  				contentType: false,
+        		processData: false,
+        		success:function(respuesta){
+
+        			 if(respuesta == "ok"){
+
+    			 		swal({
+		                    type:"success",
+		                    title: "¡El registro ha sido eliminado!",
+		                    showConfirmButton: true,
+		                    confirmButtonText: "Cerrar"
+			                    
+			             }).then(function(result){
+
+			             	if(result.value){
+
+			             		window.location = ruta+'/'+pagina; 
+
+			             	}
+
+
+			             })
+
+        			 }
+
+        		},
+		        error: function (jqXHR, textStatus, errorThrown) {
+		            console.error(textStatus + " " + errorThrown);
+		        }
+
+  			})
+
+  		}
+
+  	})
+
+})
+
+
+/*=============================================
+Limpiar las rutas
+=============================================*/
+
+function limpiarUrl(texto){
+
+	var texto = texto.toLowerCase();
+	texto = texto.replace(/[á]/g, 'a');
+	texto = texto.replace(/[é]/g, 'e');
+	texto = texto.replace(/[í]/g, 'i');
+	texto = texto.replace(/[ó]/g, 'o');
+	texto = texto.replace(/[ú]/g, 'u');
+	texto = texto.replace(/[ñ]/g, 'n');
+	texto = texto.replace(/ /g, '-');
+
+	return texto;
+
+}
+
+$(document).on("keyup", ".inputRuta", function(){
+
+	$(this).val(
+
+	 	limpiarUrl($(this).val())
+
+	)
+
+})
+
+/*=============================================
+Evitar repetir ruta 
+=============================================*/
+
+$(document).on("change",".inputRuta", function(){
+
+	$(".alert").remove();
+
+	var valorRuta = $(this).val();
+	var validarRuta = $(".validarRuta");
+
+	for(var i = 0; i < validarRuta.length; i++){
+
+		 if($(validarRuta[i]).html() == valorRuta){
+
+		 	 $(".inputRuta").val("");
+		 	 $(".inputRuta").parent().after(`
+
+				<div class="alert alert-danger">¡Error! Esta ruta ya existe en la base de datos</div>	
+
+		 	 `)
+
+		 }
+
+	}
+
+})
 
 

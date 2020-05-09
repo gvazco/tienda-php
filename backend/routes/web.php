@@ -28,9 +28,12 @@ Route::view('/ventas', 'paginas.ventas');
 Route::view('/visitas', 'paginas.visitas');
 Route::view('/usuarios', 'paginas.usuarios');
 Route::view('/administradores', 'paginas.administradores');
+// Route::view('/opiniones', 'paginas.opiniones');
+
 
 
 // Método Get
+
 
 // Route::get('/', 'PlantillaController@traerPlantilla' );
 // Route::get('/comercio', 'ComercioController@traerComercio' );
@@ -64,3 +67,4 @@ Route::resource('/ventas', 'VentasController');
 Route::resource('/visitas', 'VisitasController');
 Route::resource('/usuarios', 'UsuariosController');
 Route::resource('/administradores', 'AdministradoresController');
+// Route::resource('/opiniones', 'OpinionesController');

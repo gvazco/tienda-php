@@ -320,7 +320,7 @@ VENTANA MODAL CATEGORÍAS
 
 							<span class="badge badge-pill">
 
-							<img class="cat-icono" src="'.$url.$value["icono"].'" style="width:25%;"><p style="line-height:25px;">'.$value["categoria"].'</p>		
+							<img class="cat-icono" src="'.$url.$value["icono"].'" style="width:25%;"><p style="line-height:25px;">'.$value["titulo"].'</p>		
 
 							</span>		
 
@@ -341,7 +341,7 @@ VENTANA MODAL CATEGORÍAS
 
 					<div class="d-none d-sm-block col-12 col-sm-6 col-lg-4 bg-light p-3 pl-4">
 						
-						<h5 class="text-gray-dark">Artículos <span class="tituloCategoria"><?php echo $categorias[0]["categoria"];  ?></span></h5>
+						<h5 class="text-gray-dark">Artículos <span class="tituloCategoria"><?php echo $categorias[0]["titulo"];  ?></span></h5>
 
 						<hr>
 
@@ -381,7 +381,7 @@ VENTANA MODAL CATEGORÍAS
 
 							<div class="card-body">
 								
-								<h5 class="card-title text-gray-dark"><span class="tituloCategoria">Todo en <?php echo $categorias[0]["categoria"];  ?></span></h5>
+								<h5 class="card-title text-gray-dark"><span class="tituloCategoria">Todo en <?php echo $categorias[0]["titulo"];  ?></span></h5>
 
 								<p class="card-text small desCategoria"><?php echo $categorias[0]["descripcion"];  ?></p>
 

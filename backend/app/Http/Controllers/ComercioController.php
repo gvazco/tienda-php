@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Comercio;
 use App\Plantilla;
+use App\Administradores;
 
 class ComercioController extends Controller
 {
@@ -18,8 +19,10 @@ class ComercioController extends Controller
 
     	$comercio = Comercio::all();
     	$plantilla = Plantilla::all();
+		$administradores = Administradores::all();
+    	
 
-    	return view("paginas.comercio", array("comercio"=>$comercio, "plantilla"=>$plantilla));
+    	return view("paginas.comercio", array("comercio"=>$comercio, "plantilla"=>$plantilla, "administradores"=>$administradores));
 
     }
 

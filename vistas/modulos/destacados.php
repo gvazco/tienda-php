@@ -20,7 +20,7 @@ if($banner != null){
 
 		<img src="'.$servidor.$banner["img"].'" class="img-responsive" width="100%">
 
-		<h1 class="bannerPrincipal">VISITA NUESTRO PORTAFOLIO</h1>	
+		<h1 class="bannerPrincipal">¡VISITA NUESTRO BLOG!</h1>	
 
 		</a>
 
