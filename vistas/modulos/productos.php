@@ -95,7 +95,7 @@ if($banner != null){
 
 							echo '<div class="textoBanner textoIzq bannerPrincipal bannerSecundario">
 
-							<h1 style="color:#fff" class="text-uppercase">Artículos de '.$ofertas["categoria"].'</h1>
+							<h1 style="color:#fff" class="text-uppercase">Artículos de'.$ofertas["categoria"].'</h1>
 
 							</div>';
 

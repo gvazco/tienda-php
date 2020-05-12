@@ -14,7 +14,7 @@
 
     <div class="container-fluid">
 
-      <div class="row mb-2">
+      <div class="row mb-2 pl-3 pr-3">
 
         <div class="col-sm-6">
 
@@ -54,7 +54,7 @@
 
             <div class="card-header">
 
-              <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#crearAdministrador">Crar nuevo administrador</button>
+              <button class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#crearAdministrador">Crar nuevo administrador</button>
 
             </div>
 
@@ -304,7 +304,7 @@
 
 @if ($status == 200)
 
-@foreach ($administradores as $key => $value)
+@foreach ($administrador as $key => $value)
 
 <div class="modal" id="editarAdministrador">
 

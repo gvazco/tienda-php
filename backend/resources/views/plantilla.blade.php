@@ -20,6 +20,8 @@
 		{{-- OverlayScrollbars.min.css --}}
 		<link rel="stylesheet" href="{{ url('/') }}/css/plugins/OverlayScrollbars.min.css">
 
+		<link rel="stylesheet" href="{{ url('/') }}/css/slide.css">
+
 		{{-- TAGS INPUT --}}
 		<link rel="stylesheet" href="{{ url('/') }}/css/plugins/tagsinput.css">
 
@@ -32,6 +34,8 @@
 		<!-- DataTables -->
 		<link rel="stylesheet" href="{{ url('/') }}/css/plugins/dataTables.bootstrap4.min.css">	
 		<link rel="stylesheet" href="{{ url('/') }}/css/plugins/responsive.bootstrap.min.css">
+
+		<link rel="stylesheet" href="{{ url('/') }}/css/plugins/slider.css">
 
 		{{-- CSS AdminLTE --}}
 		<link rel="stylesheet" href="{{ url('/') }}/css/plugins/adminlte.min.css">
@@ -61,6 +65,10 @@
 
 		{{-- jquery.overlayScrollbars.min.js --}}
 		<script src="{{ url('/') }}/js/plugins/jquery.overlayScrollbars.min.js"></script>
+
+		<script src="{{ url('/') }}/js/plugins/jquery-ui.min.js"></script>
+
+		<script src="{{ url('/') }}/js/plugins/bootstrap-slider.js"></script>
 
 		{{-- TAGS INPUT --}}
 		{{-- https://www.jqueryscript.net/form/Bootstrap-4-Tag-Input-Plugin-jQuery.html --}}
@@ -118,7 +126,10 @@
 
 				<script src="{{ url('/') }}/js/codigo.js"></script>
 				<script src="{{ url('/') }}/js/gestorComercio.js"></script>
-				<script src="{{url('/')}}/js/gestorAdministradores.js"></script>
+				<script src="{{ url('/') }}/js/gestorAdministradores.js"></script>
+				<script src="{{ url('/') }}/js/gestorSlide.js"></script>
+				<script src="{{ url('/') }}/js/gestorCategorias.js"></script>
+				<script src="{{ url('/') }}/js/gestorSubcategorias.js"></script>
 
 
 			</div>

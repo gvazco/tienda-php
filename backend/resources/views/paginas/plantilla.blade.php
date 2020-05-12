@@ -14,7 +14,7 @@
 
     <div class="container-fluid">
 
-      <div class="row mb-2">
+      <div class="row mb-2 pr-3 pl-3">
 
         <div class="col-sm-6">
 

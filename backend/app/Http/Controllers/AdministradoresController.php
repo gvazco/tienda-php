@@ -66,11 +66,11 @@ class AdministradoresController extends Controller
 
 		if(count($administrador) != 0){
 
-			return view("paginas.administradores", array("status"=>200, "administrador"=>$administrador, "plantilla"=>$plantilla, "administradores"=>$administradores));
+			return view("paginas.administradores", array("status"=>200, "administrador"=>$administrador, "plantilla"=>$plantilla, "administradores"=>$administradores ));
 		
 		}else{ 
 
-			return view("paginas.administradores", array("status"=>404, "blog"=>$blog, "administradores"=>$administradores));
+			return view("paginas.administradores", array("status"=>404, "administrador"=>$administrador, "plantilla"=>$plantilla, "administradores"=>$administradores));
 		}
 	}
 

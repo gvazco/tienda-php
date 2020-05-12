@@ -8,7 +8,7 @@
 
     <div class="container-fluid">
 
-      <div class="row mb-2">
+      <div class="row mb-2 pl-3 pr-3">
 
         <div class="col-sm-6">
 
@@ -410,5 +410,8 @@
 
 
 </div>
+
+
+
 
 @endsection

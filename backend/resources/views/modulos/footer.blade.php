@@ -1,16 +1,16 @@
- <footer class="main-footer">
+ <footer class="main-footer ">
 
- 	<strong>
+ 	<strong class="pl-3">
  		Copyright &copy; 
  		@php
  		echo date("Y");
  		@endphp 
  		<a href="{{ substr(url(''),0,-15) }}" target="_blank">
- 		Techos y Mantenimientos | Mevasa</a>.
+ 		Comercializadora Mevasa</a>.
  	</strong>
 
  	<div class="float-right d-none d-sm-inline-block">
- 		Todos los derechos reservados. Sitio desarrollado por <a href="#">Disturbio Ilustrativo</a>
+ 		All Rights Reserved. Sitio desarrollado por <a href="#">Gustavo Vazco</a>
  	</div>
 
  </footer>

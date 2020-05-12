@@ -2,19 +2,19 @@
 DataTable Servidor de administradores
 =============================================*/
 
-$.ajax({
+// $.ajax({
 
-	url: ruta+"/administradores",
-	success: function(respuesta){
+// 	url: ruta+"/administradores",
+// 	success: function(respuesta){
 		
-		console.log("respuesta", respuesta);
+// 		// console.log("respuesta", respuesta);
 
-	},
-	error: function (jqXHR, textStatus, errorThrown) {
-        console.error(textStatus + " " + errorThrown);
-    }
+// 	},
+// 	error: function (jqXHR, textStatus, errorThrown) {
+//         console.error(textStatus + " " + errorThrown);
+//     }
 
-})
+// })
 
 /*=============================================
 DataTable de administradores
