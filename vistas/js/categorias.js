@@ -2,7 +2,7 @@
 IDENTIFICAR LA PANTALLA
 =============================================*/
 
-if(window.matchMedia("(min-width:1200px)").matches){
+if(window.matchMedia("(min-width:1024px)").matches){
 
 	$(document).on("mouseover", ".listaCategorias li", function(){
 
@@ -116,7 +116,7 @@ function verSubcategorias(enlace){
 		dataType: "json",
 		success: function(respuesta){	
 			
-			$(".tituloCategoria").html(respuesta[0]["categoria"]);
+			$(".tituloCategoria").html(respuesta[0]["titulo"]);
 			$(".desCategoria").html(respuesta[0]["descripcion"]);
 			$(".imgCategoria").attr("src", respuesta[0]["imgOferta"]);
 			$(".verProductos").attr("href", respuesta[0]["ruta"]);
